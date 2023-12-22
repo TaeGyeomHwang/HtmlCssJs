@@ -167,7 +167,61 @@
     float: left;  /* 왼쪽으로 플로팅 */
     width: 600px; /* 너비 */
     height: 100%; /* 높이 */
-    background-color: violet;
+    margin-top: 10px; /* 탭 메뉴 위쪽에 여백 두기 */
+  }
+
+  #tabMenu input[type="radio"]{
+    display: none;  /* 라디오 버튼 감춤 */
+  }
+
+  #tabMenu label{ /* 탭 제목 스타일 */
+    display: inline-block;  /* 탭을 가로로 배치 */
+    margin: 0 0;  
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aaa;
+    border: 1px solid transparent;
+  }
+
+  #tabMenu label:hover{ /* 마우스 포인터를 올렸을 때 탭 제목 스타일 */
+    color: #222;
+    cursor: pointer;
+  }
+
+  #tabMenu input:checked + label{ /* 활성화된 탭 제목 스타일 */
+    color: #b00;
+    border: 1px solid #ddd;
+    background-color: #eee;
+  }
+
+  .tabContent{  /* 탭 내용 스타일 */
+    display: none;
+    padding: 20px 0 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .tabContent h2{
+    display: none;
+  }
+
+  #notice ul{
+    list-style: disc;
+    margin-left: 30px;
+  }
+
+  #notice ul li{
+    font-size: 16px;
+    line-height: 2.5;
+  }
+
+  #gallery ul li{
+    display: inline;  /* 이미지 가로로 배치 */
+  }
+
+  #tab1:checked ~ #notice,
+  #tab2:checked ~ #gallery{ /* :뒤에는 공백 없어야함 */
+    display:block;
   }
 
   /* 퀵 링크 영역 */
