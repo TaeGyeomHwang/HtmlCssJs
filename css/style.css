@@ -182,5 +182,51 @@
   footer {
     width: 100%;  /* 너비 */
     height: 100px;  /* 높이 */
-    background-color: gray;
+    border-top: 2px solid #222; /* 위쪽에 가로선 추가 */
+  }
+
+  #bottomMenu{
+    width: 100%;
+    height: 20px;
+    position: relative; /* 부모 요소 position-relative */
+  }
+
+  #bottomMenu ul{
+    margin-top: 15px;
+  }
+
+  #bottomMenu ul li{
+    float: left;  /* 가로로 배치 */
+    padding: 5px 20px;
+    border-right: 1px solid #ddd; /* 항목 오른쪽에 세로선 */
+  }
+
+  #bottomMenu ul li:last-child{
+    border-right: none; /* 마지막 항목에는 세로선 없음 */
+  }
+
+  #bottomMenu ul li a, #bottomMenu ul li a:visited{
+    font-size: 15px;  /* 폰트 크기 */
+    color: #666;  /* 폰트 색상 */
+  }
+
+  #sns{
+    position: absolute; /* 자식 요소 position-absolute */
+    right: 0; /* 오른쪽 끝에 배치 */
+  }
+
+  #sns ul li{
+    border: none; /* 세로선 제거 */
+    padding: 5px;
+  }
+
+  #company{
+    clear: left;  /* 플로팅 해제 */
+    margin-top: 25px; /* 위, 왼쪽 마진 */
+    margin-left: 20px;
+  }
+
+  p{
+    font-size: 14px; /* 폰트 크기 */
+    color: #aaa;  /* 폰트 색상 */
   }
